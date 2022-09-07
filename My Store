@@ -1,0 +1,14 @@
+CREATE TABLE pc_acc(id INTEGER PRIMARY KEY,name TEXT, brand TEXT,quantity INTEGER, price INTEGER);
+INSERT INTO pc_acc VALUES (1,"Mouse","G-Pro Wireless",2,50);
+INSERT INTO pc_acc VALUES (2,"Headset","Logitech G432",5,40);
+INSERT INTO pc_acc VALUES (3,"Mouse Pad", "Logitech G840 XL",4,30);
+INSERT INTO pc_acc VALUES (4,"Keyboard","Logitech Pro X",6,80);
+INSERT INTO pc_acc VALUES (5,"Webcam","Logitech 4K Pro", 1,180);
+
+SELECT SUM(quantity) FROM pc_acc;
+SELECT SUM(price) FROM pc_acc;
+SELECT * FROM pc_acc;
+SELECT * FROM pc_acc;
+SELECT * FROM pc_acc;
+SELECT * FROM pc_acc;
+SELECT * FROM pc_acc;
