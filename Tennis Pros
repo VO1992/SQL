@@ -1,0 +1,33 @@
+/* Create table about the people and what they do here */
+CREATE TABLE ATP (id INTEGER PRIMARY KEY AUTOINCREMENT ,Fullname TEXT,rank INTEGER,country TEXT);
+
+INSERT INTO ATP (Fullname,rank,country) VALUES ("Daniil Medvedev",1,"Russia");
+INSERT INTO ATP(Fullname,rank,country) VALUES ("Alexander Zverev ",2,"Germany");
+INSERT INTO ATP(Fullname,rank,country) VALUES ("Rafeal Nadal",3,"Spain");
+INSERT INTO ATP(Fullname,rank,country) VALUES ("Stefanos Ysitsipas",4,"Greece");
+INSERT INTO ATP (Fullname,rank,country) VALUES ("Casper Ruud",5,"Norway");
+INSERT INTO ATP (Fullname,rank,country)VALUES ("Carlos Alcaraz",6,"Spain");
+INSERT INTO ATP (Fullname,rank,country) VALUES ("Novak Djokovic",7,"Italy");
+INSERT INTO ATP (Fullname,rank,country) VALUES ("Andrey Rublev",8,"Russia");
+INSERT INTO ATP (Fullname,rank,country) VALUES ("Felix Auger-Aliassime",9,"Canada");
+INSERT INTO ATP (Fullname,rank,country) VALUES ("Jannik Sinner",10,"Serbia");
+
+
+
+CREATE TABLE CAREER(id INTEGER PRIMARY KEY AUTOINCREMENT ,player_id INTEGER,winnings INTEGER);
+
+INSERT INTO CAREER (player_id,winnings) VALUES (1,24.4);
+INSERT INTO CAREER (player_id,winnings)  VALUES (2,32.4);
+INSERT INTO CAREER (player_id,winnings)  VALUES (3,131.1);
+INSERT INTO CAREER (player_id,winnings)  VALUES (4,19.8);
+INSERT INTO CAREER (player_id,winnings) VALUES (5,6.2);
+INSERT INTO CAREER (player_id,winnings) VALUES (6,7.8);
+INSERT INTO CAREER (player_id,winnings) VALUES (7,158.9);
+INSERT INTO CAREER (player_id,winnings) VALUES(8,12.1);
+INSERT INTO CAREER (player_id,winnings) VALUES (9,7.4);
+INSERT INTO CAREER (player_id,winnings) VALUES (10,5.6);
+
+SELECT ATP.Fullname,CAREER.player_id
+FROM ATP
+JOIN CAREER
+ON ATP.id = CAREER.player_id
