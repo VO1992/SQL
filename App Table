@@ -1,0 +1,17 @@
+CREATE TABLE clash (player_id INTEGER,firstname TEXT,wins INTEGER,crowns INTEGER);
+
+INSERT INTO clash VALUES(1,'Victor',5863,5373);
+INSERT INTO clash VALUES(2,'Javi',3036,3423);
+INSERT INTO clash VALUES(3,'Gabby',2900,3300);
+INSERT INTO clash VALUES(4,'Angie',4320,6253);
+iNSERT INTO clash VALUES(5,'Alyssa',2430,1230);
+INSERT INTO clash VALUES(6,'Paul',8709,9876);
+SELECT * FROM clash;
+
+UPDATE clash SET crowns = 7567 WHERE crowns = 1230;
+
+SELECT * FROM clash;
+
+DELETE FROM clash WHERE firstname = 'Paul';
+
+SELECT * FROM clash
