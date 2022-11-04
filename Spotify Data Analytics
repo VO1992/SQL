@@ -28,3 +28,18 @@ FROM BIT_DB.Spotifydata
 SELECT count(tempo) 
 FROM BIT_DB.Spotifydata
 WHERE tempo > 100
+--I determined the avg popularity, danceability, and energy by artist and track. 
+SELECT
+artist_name
+,track_name
+,avg(popularity)
+,avg(danceability)
+,avg(energy)
+FROM BIT_DB.spotifydata
+GROUP BY artist_name, track_name
+
+--I determined who the Top 10 artists are by popularity
+SELECT track_name, artist_name, popularity
+FROM BIT_DB.spotifydata
+ORDER BY popularity desc
+LIMIT 10
