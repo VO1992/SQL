@@ -1,5 +1,14 @@
 --Show Customers (their full names, customer ID, and country) who are not in the US
+
+SELECT firstname,lastname,Customerid,country
+FROM customers
+WHERE country != 'Brazil'
+
+--Show only the Customers from Brazil.
+
 SELECT *
 FROM customers
-WHERE country != 'USA'
+WHERE country = 'Brazil'
+
+
 
