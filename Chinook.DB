@@ -1,14 +1,18 @@
 --Show Customers (their full names, customer ID, and country) who are not in the US
-
 SELECT firstname,lastname,Customerid,country
 FROM customers
 WHERE country != 'Brazil'
 
 --Show only the Customers from Brazil.
-
 SELECT *
 FROM customers
 WHERE country = 'Brazil'
+
+--How many Invoices were there in 2009?
+SELECT COUNT(InvoiceDate)
+FROM invoices
+WHERE InvoiceDate >= '2009-01-01 00:00:00' 
+       AND InvoiceDate < '2010-01-01 00:00:00'
 
 
 
