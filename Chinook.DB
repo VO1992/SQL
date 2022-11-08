@@ -14,5 +14,9 @@ FROM invoices
 WHERE InvoiceDate >= '2009-01-01 00:00:00' 
        AND InvoiceDate < '2010-01-01 00:00:00'
 
-
+--What are the total sales for 2009?
+SELECT ROUND(SUM(Total),2) as Sales
+FROM invoices
+WHERE InvoiceDate >= '2009-01-01 00:00:00' 
+       AND InvoiceDate < '2010-01-01 00:00:00'
 
